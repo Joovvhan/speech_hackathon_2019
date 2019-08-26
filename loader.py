@@ -65,7 +65,9 @@ def get_spectrogram_feature(filepath):
     return feat
 
 def get_script(filepath, bos_id, eos_id):
-    key = filepath.split('/')[-1].split('.')[0]
+#     key = filepath.split('/')[-1].split('.')[0]
+    key = filepath.split('\\')[-1].split('.')[0]
+#     print(key)
     script = target_dict[key]
     tokens = script.split(' ')
     result = list()
